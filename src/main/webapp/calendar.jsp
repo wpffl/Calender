@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>달력 게시판</title>
+
 <style type="text/css">
 	#calendar{
 		border : 1px solid gray;
@@ -28,9 +28,27 @@
 		position : relative; 
 	}
 	
+	#insert {
+		margin-right: 350px; 
+	}
+	
+	#modify_user {
+	
+	}
+	#c_logout {
+	
+	}
+	
 </style>
+
+<title>달력 게시판</title>
+
 </head>
 <body>
+<div align="center">
+<button type="submit" id="insert" onclick="location.href='insert.jsp'">일정등록</button>
+<button type="submit" id="modify_user" onclick="location.href='modify_user.jsp'">회원수정</button>
+<button type="submit" id="c_logout" onclick="location.href='logout.do'">로그아웃</button>
 <h1>일정관리 게시판</h1>
 	<% 
 		//현재 날짜의 연도와 월을 가져 옴
@@ -94,6 +112,7 @@
 			<th>토</th>
 		</tr>
 		<tr>
+		
 		<%
 			//시작 공백
 			for(int i=0; i<dayOfWeek-1;i++){
@@ -103,7 +122,7 @@
 			for(int i=1; i<=lastDay;i++){
 				%>
 				<td>
-					<%=i%>
+					<a href="content.jsp"><%=i%></a>
 				</td>
 				<%
 				if((dayOfWeek-1+i)%7==0){
@@ -115,9 +134,10 @@
 				out.print("<td>&nbsp;</td>");	
 			}
 		%>
+
 		</tr>
 	</table>
-
+</div>
 
 </body>
 </html>
