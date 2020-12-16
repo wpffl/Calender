@@ -1,4 +1,4 @@
-package com.gukje.controller;
+package com.gukje.sch.controller;
 
 public class ContentController {
 

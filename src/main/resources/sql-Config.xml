@@ -3,5 +3,13 @@
                 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
                 "http://mybatis.org/dtd/mybatis-3-config.dtd" >
 <configuration>
+  <typeAliases>
+     <typeAlias type="com.gukje.sch.common.ContentVO"   alias="ContentVO" />
+     <typeAlias type="com.gukje.sch.common.UserVO"   alias="UserVO" />
+  </typeAliases>
   
+ <mappers>
+  <mapper resource="mappings/CalenderMapper.xml" />
+  <mapper resource="mappings/UserMapper.xml" />
+ </mappers>   
 </configuration>
