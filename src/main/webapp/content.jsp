@@ -5,29 +5,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./css/basic.css">
+<link rel="stylesheet" href="./css/content.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <div align="center">
-<form action="calendar.jsp">
+<form action="update_cal.do">
 <h1>일정 보기</h1>
-<table border=1>
+<table class="type05">
 
 <tr>
-	<td>제목</td>
+	<th scope="row" id="text1">제목</th>
 	<td>${m.title}</td>
 </tr>
 
 <tr>
-	<td>닉네임</td>
+	<th scope="row" id="text1">닉네임</th>
 	<td>${m.nickname}</td>
 </tr>
 
 <tr>
-	<td>일시</td>
+	<th scope="row" id="text1">일시</th>
 	<td>
 		<select id="year" name="year">
            	<c:forEach var="i" begin="2000" end="2030" step="1" >
@@ -72,20 +72,20 @@
 </tr>
 
 <tr>
-	<td>공개여부</td>
+	<th scope="row" id="text1">공개여부</th>
 	<td>${locker}</td>
 </tr>
 
 <tr>
-	<td>설명</td>
+	<th scope="row" id="text1">설명</th>
 	<td>${content}</td>
 </tr>
 
 </table>
 </form>
-<br>
-<button type="submit" onclick="location.href='calendar.jsp'">일정보기</button>
+<input type="submit" value="달력보기" onclick="location.href='calendar.jsp'">
 <input type="submit" value="수정하기">
+<input type="submit" value="삭제하기" onclick="location.href='del_content.do'">
 </div>
 </body>
 </html>

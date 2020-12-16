@@ -5,27 +5,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/basic.css">
+<link rel="stylesheet" href="./css/insert.css">
 <title>Insert title here</title>
+<script>
+function box_check(bck){
+    var obj = document.getElementsByName("locker");
+    for(var i=0; i<obj.length; i++){
+        if(obj[i] != bck){
+            obj[i].checked = false;
+        }
+    }
+}
+</script>
 </head>
 <body>
 <div align="center">
 <form action="calendar.jsp">
 <h1>일정 등록</h1>
-<table border=1>
+<table id="table">
 
 <tr>
-	<td>제목</td>
+	<td id="text">제목</td>
 	<td><input type="text" name="title"></td>
 </tr>
 
 <tr>
-	<td>닉네임</td>
+	<td id="text">공/사</td>
+	<td>
+		<select name=type>
+			<option value="officially">직장</option>
+			<option value="personally">개인</option>
+		</select>
+	</td>
+</tr>
+
+<tr>
+	<td id="text">닉네임</td>
 	<td><input type="text" name="nickname"></td>
 </tr>
 
 <tr>
-	<td>일시</td>
+	<td id="text">일시</td>
 	<td>
 		<select id="year" name="year">
            	<c:forEach var="i" begin="2000" end="2030" step="1" >
@@ -70,16 +90,16 @@
 </tr>
 
 <tr>
-	<td>공개여부</td>
+	<td id="text">공개여부</td>
 	<td>
-		<input type="checkbox" name="locker" value="1" checked>공개
-		<input type="checkbox" name="locker" value="2">비공개
+		<input type="checkbox" name="locker" value="1" onclick="box_check(this);" checked>공개
+		<input type="checkbox" name="locker" value="2" onclick="box_check(this);">비공개
 	</td>
 </tr>
 
 <tr>
-	<td>설명</td>
-	<td><textarea name="content" rows="10" cols="30">세부일정을 입력해주세요!</textarea></td>
+	<td id="text">설명</td>
+	<td><textarea name="content" rows="10" cols="35">세부일정을 입력해주세요!</textarea></td>
 </tr>
 
 </table>

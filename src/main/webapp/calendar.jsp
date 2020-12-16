@@ -9,6 +9,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/calendar.css">
 
+<style type="text/css"> 
+a { text-decoration:none } 
+</style> 
 
 <title>달력 게시판</title>
 

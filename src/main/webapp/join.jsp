@@ -7,6 +7,17 @@
 <link rel="stylesheet" href="./css/join.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<!-- 되는지 확인이 필요함! -->
+<script>
+	function functionK() {
+		if (f1.pwd.value=="pwdcheck") {
+			alert("비밀번호를 동일하게 입력해주세요.");
+			return false;
+		}
+	}
+</script>
+
 </head>
 <body>
 <div align="center" id="outline">
@@ -107,7 +118,7 @@
 		 
 		</table>
 	</form>
-	<br><br>
+	<br><br><br><br>
 	<button type="submit" id="j_btn_1" onclick="location.href='login.jsp'">가입완료</button>
 </div>
 </div>
