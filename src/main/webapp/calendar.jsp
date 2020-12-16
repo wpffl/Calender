@@ -7,39 +7,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/calendar.css">
 
-<style type="text/css">
-	#calendar{
-		border : 1px solid gray;
-		border-collapse: collapse;
-	}
-	
-	#calendar th{
-		width : 80px;
-		border : 1px solid gray;
-	}
-	
-	#calendar td{
-		width: 80px;
-		height: 80px;
-		border : 1px solid gray;
-		text-align : left;
-		vertical-align : top;
-		position : relative; 
-	}
-	
-	#insert {
-		margin-right: 350px; 
-	}
-	
-	#modify_user {
-	
-	}
-	#c_logout {
-	
-	}
-	
-</style>
 
 <title>달력 게시판</title>
 

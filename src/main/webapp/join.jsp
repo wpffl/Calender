@@ -4,36 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="./css/join.css">
 
-<script>
-
-</script>
-
-<style>
-		
-	#outline {
-		margin-top:50px;
-	}
-	
-	#table1 {
-		width:300px;
-		height:550px;
-		border: 1px solid skyblue;
-	    border-top-left-radius:10px;
-		border-top-right-radius:10px;
-		border-bottom-left-radius:10px;
-		border-bottom-right-radius:10px;
-	}
-	
-	input[type=text]{
-	    padding: 6px 8px;
-	    margin: 3px 0;
-	    display: inline-block;
-	    border: 1px solid #ccc;
-	    border-radius: 4px;
-	}
-	    
-</style>
 
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -41,44 +13,44 @@
 <body>
 <div align="center" id="outline">
 <div id="table1">
-<h1>회원가입</h1>
+<h2 id=join_font>회원가입</h2>
 <form name="f1" action="login.do" onSubmit="functionK()">
 	<table>
 		<tr>
-			<td>아이디</td>
+			<td id="text1">아이디</td>
 		</tr>
 		<tr>
 			<td>
 			<input type="text" name="id" >
-			<input type="button" id="" value="중복확인">
+			<button type="submit" id="j_btn_1" onclick="location.href='checked_pwd.do'">중복확인</button>
 			</td>
 		</tr>
 
 		<tr>
-			<td>비밀번호</td>
+			<td id="text1">비밀번호</td>
 		</tr>
 		<tr>
 			<td>
-				<input type="password" name="pwd" >
+				<input type="password" name="pwd" min="8">
 			</td>
 		</tr>
 		
 		<tr>
-			<td>비밀번호 확인</td>
+			<td id="text1">비밀번호 확인</td>
 		</tr>
 		<tr>
-			<td><input type="password" name="pwdcheck"></td>
+			<td><input type="password" name="pwdcheck" min="8"></td>
 		</tr>
 
 		<tr>
-			<td>닉네임</td>
+			<td id="text1">닉네임</td>
 		</tr>
 		<tr>
 			<td><input type="text" name="nickname"></td>
 		</tr>
 		
 		<tr>
-			<td>생일</td>
+			<td id="text1">생일</td>
 		</tr>
 		<tr>
 		<td>
@@ -87,7 +59,7 @@
 			   <c:forEach var="i" begin="1900" end="2020" step="1" >
 			       <option value="${i}" <c:if test="${i == (now.year + 1900)}">${i}</c:if> >${i}</option>
 			   </c:forEach>
-			</select>년
+			</select><font id=text3>년</font>
 	
 	        <select name="month">
 	         <% 
@@ -99,30 +71,30 @@
 	         	<%
 	         	}}
 	         	%>
-	         </select>월   
+	         </select><font id=text3>월</font>   
 	         
 	         <select name="day" >
 		         <c:forEach begin="1" end="31" var="day">
 		         	<c:if test="${day<10}"><option>0${day}</option></c:if>
 				    <c:if test="${day>9}"><option>${day}</option></c:if>
 				 </c:forEach>
-	         </select>일 
+	         </select><font id=text3>일 </font>
 		</td>
 		</tr>
 		 
 		 <tr>
-			 <td>전화번호</td>
+			 <td id="text2">전화번호</td>
 		 </tr>
 		 <tr>
 			 <td>
-			 	 <input size=3 type="text" name="ph1">
-			 	- <input size=4 type="text" name="ph2">
-			 	- <input size=4 type="text" name="ph3">
+			 	 <input  size=3 type="text" name="ph1" max="3">
+			 	- <input size=4 type="text" name="ph2" max="4">
+			 	- <input size=4 type="text" name="ph3" max="4">
 			 </td>
 		 </tr>
 		 
 		 <tr>
-			 <td>이메일</td>
+			 <td id="text1">이메일</td>
 		 </tr>
 		 <tr>
 			 <td><input type="text" name="email"></td>
@@ -130,8 +102,8 @@
 		 
 		</table>
 	</form>
-	<br>
-	<input type="submit" value="가입완료">
+	<br><br>
+	<button type="submit" id="j_btn_1" onclick="location.href='login.jsp'">가입완료</button>
 </div>
 </div>
 </body>

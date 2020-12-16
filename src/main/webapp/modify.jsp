@@ -7,6 +7,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/basic.css">
 <title>Insert title here</title>
 </head>
 <body>
