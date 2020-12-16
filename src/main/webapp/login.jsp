@@ -12,11 +12,11 @@
 <table id="table">
 <tr><td align="center">
 <h1>Scheduler</h1>
-<form action="login.do" method="post" >
+<form action="#" method="post" >
     <input type="text" placeholder="아이디" name="id"/><br>
     <input type="text" placeholder="비밀번호" name="pwd"/><br>
     <div id="btn_group">
-	    <button type="submit" id="btn_1">로그인</button><br>
+	    <button type="button" id="btn_1" onclick="location.href='login.do'" >로그인</button><br>
 	    <button type="button" id="btn_2" onclick="location.href='join.jsp'" >회원가입</button>
     </div>
 </form>
@@ -25,8 +25,8 @@
 </table>
 
 <div id="btn_group">
-<button type=button id="btn_3" onclick="location.href='find_id.jsp'" >아이디 찾기</button><br>
-<button type=button id="btn_4" onclick="location.href='find_pwd.jsp'" >비밀번호 찾기</button><br>
+<button type=button id="btn_3" onclick="location.href='find_id.do'" >아이디 찾기</button><br>
+<button type=button id="btn_4" onclick="location.href='find_pwd.do'" >비밀번호 찾기</button><br>
 </div>
 </div>
 </body>

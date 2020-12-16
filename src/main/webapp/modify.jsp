@@ -7,7 +7,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/basic.css">
+<link rel="stylesheet" href="./css/modify.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -82,7 +82,7 @@
 <tr>
 	<td>설명</td>
 	<td><textarea name="content" rows="10" cols="30"></textarea></td>
-	<!--  textarea 값 넘겨받는 방법 찾는중 placeholder="<?=$content?>" -->
+	<!-- textarea 값 넘겨받는 방법 찾는중 placeholder="<?=$content?>" -->
 </tr>
 
 </table>
