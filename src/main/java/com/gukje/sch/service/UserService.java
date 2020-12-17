@@ -1,5 +1,7 @@
 package com.gukje.sch.service;
 
-public interface UserService {
+import com.gukje.sch.common.UserVO;
 
+public interface UserService {
+	public void insert(UserVO vo);
 }

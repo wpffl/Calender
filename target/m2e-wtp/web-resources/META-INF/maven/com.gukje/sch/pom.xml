@@ -29,7 +29,12 @@
 			<artifactId>ojdbc8</artifactId>
 			<version>12.2.0.1</version>
 		</dependency>
-		
+		<!-- H2 데이터베이스 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.200</version>
+		</dependency>
 	   <!-- Mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>

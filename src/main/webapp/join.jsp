@@ -32,7 +32,7 @@ for(var y=start_year; y<=today_year; y++){
 				} 
 			} 
 		}
-
+<!-- 
 function checkValue()
 {	
 
@@ -75,7 +75,7 @@ function checkValue()
 		return false;
 	}
 }
-	
+-->	
 	//function openIdChk(){
 		
 		//window.name = "parentForm";
@@ -95,7 +95,7 @@ function checkValue()
 <div id="table1">
 <h2 id=join_font>회원가입</h2>
 <form method="post" name="f1" 
-action="login.jsp" onsubmit="return checkValue()">
+action="join.do" onsubmit="return checkValue()">
 	<table>
 		<tr>
 			<td id="text1">아이디</td>
@@ -103,9 +103,9 @@ action="login.jsp" onsubmit="return checkValue()">
 		<tr>
 			<td>
 			<input type="text" name="id" onkeydown="inputIdChl()" >
-			<input type="button" value="중복확인" id="j_btn_1" onclick="openIdChk()">
-			<input type="hidden" name="idDuplication" value="idUncheck">
-			</td>
+			<!-- <input type="button" value="중복확인" id="j_btn_1" onclick="openIdChk()">
+			<input type="hidden" name="idDuplication" value="idUncheck"> -->
+			</td> 
 		</tr>
 
 		<tr>
@@ -142,13 +142,13 @@ action="login.jsp" onsubmit="return checkValue()">
 		<tr>
 		<td>
 		
-			<select id="select_year" onchange="javascript:lastday();" name="year">
+			<select id="select_year" onchange="javascript:lastday();" name="birthy">
 			   <c:forEach var="i" begin="1900" end="2020" step="1" >
 			       <option value="${i}" <c:if test="${i == (now.year + 1900)}">${i}</c:if> >${i}</option>
 			   </c:forEach>
 			</select><font id=text3>년</font>
 	
-	         <select id="select_month" onchange="javascript:lastday();" name="month">
+	         <select id="select_month" onchange="javascript:lastday();" name="birthm">
 										<c:forEach var="i" begin="1" end="12" step="1">
 							<c:if test="${i < 10}"> 
 							<option selected="month">0${i}</option>
@@ -159,7 +159,7 @@ action="login.jsp" onsubmit="return checkValue()">
 							</c:forEach>
 	         </select><font id=text3>월</font>   
 	         
-	         <select id="select_day" name="day" >
+	         <select id="select_day" name="birthd" >
 		         <c:forEach begin="1" end="31" var="day">
 		         	<c:if test="${day<10}"><option>0${day}</option></c:if>
 				    <c:if test="${day>9}"><option>${day}</option></c:if>
@@ -173,7 +173,7 @@ action="login.jsp" onsubmit="return checkValue()">
 		 </tr>
 		 <tr>
 			 <td>
-			 	 <input  size=3 type="text" name="ph1" max="3">
+			 	  <input size=3 type="text" name="ph1" max="3">
 			 	- <input size=4 type="text" name="ph2" max="4">
 			 	- <input size=4 type="text" name="ph3" max="4">
 			 </td>
@@ -188,8 +188,10 @@ action="login.jsp" onsubmit="return checkValue()">
 		 
 		</table>
 		<br><br>
-	<input type="submit" id="j_btn_1" value="가입하기" />
-	<input type="button" id="j_btn_1" value="취소" onclick="location.href='login.jsp'">
+		<!--<input type=submit  value="등록">-->
+
+	  <input type="submit" id="j_btn_1" value="가입하기" onclick="location.href='join.do'" /> 
+	<input type="button" id="j_btn_1" value="취소" >
 	</form>
 	
 	
