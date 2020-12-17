@@ -22,15 +22,15 @@ function box_check(bck){
 <div align="center">
 <form action="calendar.jsp">
 <h1>일정 등록</h1>
-<table id="table">
+<table class="type05">
 
 <tr>
-	<td id="text">제목</td>
+	<th id="text">제목</th>
 	<td><input type="text" name="title"></td>
 </tr>
 
 <tr>
-	<td id="text">공/사</td>
+	<th id="text">공/사</th>
 	<td>
 		<select name=type>
 			<option value="officially">직장</option>
@@ -40,12 +40,12 @@ function box_check(bck){
 </tr>
 
 <tr>
-	<td id="text">닉네임</td>
+	<th id="text">닉네임</th>
 	<td><input type="text" name="nickname"></td>
 </tr>
 
 <tr>
-	<td id="text">일시</td>
+	<th id="text">일시</th>
 	<td>
 		<select id="year" name="year">
            	<c:forEach var="i" begin="2000" end="2030" step="1" >
@@ -90,7 +90,7 @@ function box_check(bck){
 </tr>
 
 <tr>
-	<td id="text">공개여부</td>
+	<th id="text">공개여부</th>
 	<td>
 		<input type="checkbox" name="locker" value="1" onclick="box_check(this);" checked>공개
 		<input type="checkbox" name="locker" value="2" onclick="box_check(this);">비공개
@@ -98,7 +98,7 @@ function box_check(bck){
 </tr>
 
 <tr>
-	<td id="text">설명</td>
+	<th id="text">설명</th>
 	<td><textarea name="content" rows="10" cols="35">세부일정을 입력해주세요!</textarea></td>
 </tr>
 

@@ -1,14 +1,29 @@
 @charset "UTF-8";
 
-#table {
-    width: 430px;
-    height: 480px;
-    border: 1px solid skyblue;
-    border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
-   }
+table.type05 {
+  border-collapse: separate;
+  border-spacing: 1px;
+  text-align: left;
+  line-height: 1.5;
+  border-top: 1px solid skyblue;
+  margin: 20px 10px;
+}
+
+table.type05 th {
+  width: 100px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid skyblue;
+  background: #efefef;
+}
+
+table.type05 td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid skyblue;
+}
    
 input[type=text]{
    padding: 4px 8px;
@@ -20,4 +35,8 @@ input[type=text]{
    
 #text {
 	padding-left: 15px;
+	font-family:굴림;
+	font-weight:700;
+	color:#667bad;
 }
+

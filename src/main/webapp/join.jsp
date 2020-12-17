@@ -92,20 +92,20 @@ function checkValue()
 </head>
 <body>
 <div align="center" id="outline">
+<h1 id=join_font>회원가입</h1>
 <div id="table1">
-<h2 id=join_font>회원가입</h2>
 <form method="post" name="f1" 
 action="join.do" onsubmit="return checkValue()">
 	<table>
 		<tr>
-			<td id="text1">아이디</td>
+			<td id="text0">아이디</td>
 		</tr>
 		<tr>
 			<td>
 			<input type="text" name="id" onkeydown="inputIdChl()" >
 			<!-- <input type="button" value="중복확인" id="j_btn_1" onclick="openIdChk()">
 			<input type="hidden" name="idDuplication" value="idUncheck"> -->
-			</td> 
+			</td>
 		</tr>
 
 		<tr>
@@ -187,11 +187,12 @@ action="join.do" onsubmit="return checkValue()">
 		 </tr>
 		 
 		</table>
-		<br><br>
+		<br><br><br>
 		<!--<input type=submit  value="등록">-->
 
-	  <input type="submit" id="j_btn_1" value="가입하기" onclick="location.href='join.do'" /> 
-	<input type="button" id="j_btn_1" value="취소" >
+	  <input type="submit" id="j_btn_1" value="가입하기" /> 
+	<input type="button" id="j_btn_1" value="취소" onclick="location.href='calender.jsp'">
+	<br><br>
 	</form>
 	
 	
