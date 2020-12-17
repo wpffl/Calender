@@ -10,7 +10,7 @@
 <body>
 <div id="form_properties" align="center">
 <table id="table">
-<tr><td align="center">
+<tr><td align="center"> 
 <h1>Scheduler</h1>
 <form action="login.do" method="post" >
     <input type="text" placeholder="아이디" name="id"/><br>

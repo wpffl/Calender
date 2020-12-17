@@ -100,11 +100,11 @@
 				
 			<!-- 끝 공백 -->
 			<c:forEach var="i" begin="0" end="${7-(dayOfWeek-2+lastDay)%7)%7}" step="1">
-				out.print("<td>&nbsp;</td>");	
+				out.print("<td>&nbsp;</td>");
 			</c:forEach>
 		</tr>
 	</table>
 </div>
 
 </body>
-</html>
+</html> 
