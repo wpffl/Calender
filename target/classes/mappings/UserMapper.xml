@@ -2,4 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mappings.UserMapper">
 
+ <insert id="insert"  parameterType="UserVo" >   
+   <![CDATA[
+       insert  into usertbl ( id, pwd, name, nickname, birthy, birthm, birthd, ph1, ph2, ph3, email )    
+       values ( #{id} , #{pwd} ,#{name} ,#{nickname} , #{birthy} ,#{birthm} ,#{birthd}, #{ph1}, #{ph2}, #{ph3}, #{email} )
+    ]]>
+ </insert>
+
 </mapper>
