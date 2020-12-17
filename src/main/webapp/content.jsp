@@ -83,7 +83,7 @@
 
 </table>
 </form>
-<input type="submit" value="달력보기" onclick="location.href='calendar.jsp'">
+<input type="submit" value="달력보기" onclick="location.href='calender.do'">
 <input type="submit" value="수정하기">
 <input type="submit" value="삭제하기" onclick="location.href='del_content.do'">
 </div>
