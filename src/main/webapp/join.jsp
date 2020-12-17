@@ -22,7 +22,7 @@ for(var y=start_year; y<=today_year; y++){
 		var Month=document.getElementById('select_month').value; 
 		var day=new Date(new Date(Year,Month,1)-86400000).getDate(); 
 		var dayindex_len=document.getElementById('select_day').length;
-		if(day>dayindex_len){ 
+		if(day>dayindex_len){  
 			for(var i=(dayindex_len+1); i<=day; i++){ 
 				document.getElementById('select_day').options[i-1] = new Option(i, i);
 				} 
