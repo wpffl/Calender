@@ -17,7 +17,7 @@
 <body>
 <div align="center">
 <button type="submit" id="insert" onclick="location.href='insert.jsp'">일정등록</button>
-<button type="submit" id="modify_user" onclick="location.href='modify_user.jsp'">회원수정</button>
+<button type="submit" id="myinfo" onclick="location.href='myinfo.jsp'">회원수정</button>
 <button type="submit" id="c_logout" onclick="location.href='logout.do'">로그아웃</button>
 <h1>일정관리 게시판</h1>
 

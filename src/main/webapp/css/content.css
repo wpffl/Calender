@@ -5,16 +5,6 @@
 	color:skyblue;
 }
 
-table.type04 {
-    width: 450px;
-    height: 350px;
-    border: 1px solid skyblue;
-    border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
-   }
-
 table.type05 {
   border-collapse: separate;
   border-spacing: 1px;
@@ -23,6 +13,7 @@ table.type05 {
   border-top: 1px solid skyblue;
   margin: 20px 10px;
 }
+
 table.type05 th {
   width: 100px;
   padding: 10px;
@@ -31,6 +22,7 @@ table.type05 th {
   border-bottom: 1px solid skyblue;
   background: #efefef;
 }
+
 table.type05 td {
   width: 350px;
   padding: 10px;

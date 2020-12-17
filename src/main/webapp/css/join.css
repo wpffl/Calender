@@ -8,6 +8,11 @@
 	margin-top:50px;
 	}
 	
+#text0 {
+	padding-top:30px;
+	padding-bottom:2px;
+}
+
 #text1 {
 	padding-top:4px;
 	padding-bottom:2px;
@@ -26,7 +31,7 @@
 	font-weight:700;
 	color:#667bad;
 	width:300px;
-	height:650px;
+	height:580px;
 	border:1px solid skyblue;
     border-top-left-radius:10px;
 	border-top-right-radius:10px;
@@ -49,6 +54,11 @@ input[type=password]{
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+#j_btn_1:hover{
+	color:white;
+	background-color:skyblue;
 }
 
 #j_btn_1{

@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+#outline {
+	margin-top:50px;
+	}
+
+#table1 {
+	font-family:굴림;
+	font-weight:700;
+	color:#667bad;
+	width:350px;
+	height:580px;
+	border:1px solid skyblue;
+    border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	padding-bottom:20px;
+}
+
+input[type=text]{
+	margin-top:-15px;
+	margin-left:25px;
+	padding: 6px 8px;
+    display: inline-block;
+    border: 1px solid skyblue;
+    border-radius: 4px;
+}
+
+input[type=password]{
+	margin-top:-20px;
+    padding: 6px 8px;
+    margin-left:25px;
+    display: inline-block;
+    border: 1px solid skyblue;
+    border-radius: 4px;
+}
+
+input[type=submit]{
+    padding: 6px 8px;
+    
+    margin: 3px 0;
+    display: inline-block;
+    background-color:rgba(0,0,0,0);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select {
+	margin-left:25px;
+}
+
+#is:hover{
+	color:white;
+	background-color:skyblue;
+}
+
+#text {
+	padding-left:25px;
+}
+
+#text0 {
+	padding-top:18px;
+	padding-left:25px;
+}
