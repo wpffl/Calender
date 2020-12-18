@@ -23,14 +23,14 @@
 
 	<table id="calendar">
 		<caption>
-			<a href="./calender.do?year=${c.getYear()-1}&month=${c.getMonth()-1}">이전 년도</a>
+			<a href="./calender.do?year=${c.year-1}&month=${c.month-1}">이전 년도</a>
 			&nbsp;
-			<a href="./calender.do?year=${c.getYear()}&month=${c.getMonth()-1}">이전 월</a>
-				<span class="y">${c.getYear()}</span>년도
-				<span class="m">${c.getMonth()}</span>월
-			<a href="./calender.do?year=${c.getYear()}&month=${c.getMonth()+1}">다음 월</a>
+			<a href="./calender.do?year=${c.year}&month=${c.month-1}">이전 월</a>
+				<span class="y">${c.year}</span>년도
+				<span class="m">${c.month}</span>월
+			<a href="./calender.do?year=${c.year}&month=${c.month+1}">다음 월</a>
 			&nbsp;
-			<a href="./calender.do?year=${c.getYear()+1}&month=${c.getMonth()}">다음 년도</a>
+			<a href="./calender.do?year=${c.year+1}&month=${c.month}">다음 년도</a>
 		</caption>
 		<tr>
 			<th>일</th>
@@ -42,27 +42,21 @@
 			<th>토</th>
 		</tr>
 		<tr>
-		
-		<%-- <!-- 시작공백 -->
-			<c:forEach  var="i" begin="0" end="${c.DayOfWeek()-2}" step="1" >
-				out.print("<td>&nbsp;</td>");
+			<c:forEach begin="0" end="${c.dayOfWeek-2}" step="1">
+			<td>&nbsp;</td>
 			</c:forEach>
-		<!-- 달력일수 -->
-			<c:forEach var="i" begin="1" end="${c.getLastDay()}" step="1">
-					<td>
-						<a href="content.jsp">
-							<c:out value="${i}" />
-						</a>
-					</td>
-				<c:if test="${c.DayOfWeek()-1+i)%7==0}">
-					</tr><tr>
+			
+			<c:forEach var="i" begin="1" end="${c.lastDay}" step="1">
+				<td><a href="./content.do?year=${c.year}&month=${c.month}&day=${i}"><c:out value="${i}"></c:out></a></td>
+				<c:if test="${(c.dayOfWeek-1+i)%7==0}">
+				</tr><tr>
 				</c:if>
 			</c:forEach>
-				
-		<!-- 끝 공백 -->
-			<c:forEach var="i" begin="0" end="${7-((c.DayOfWeek()-2)+c.LastDay())%7)%7}" step="1">
-				out.print("<td>&nbsp;</td>");
-			</c:forEach> --%>
+			
+			<c:forEach begin="0" end="${(7-(c.dayOfWeek+c.lastDay)%7)%7}" step="1">
+			<td>&nbsp;</td>
+			</c:forEach>
+			
 		</tr>
 	</table>
 </div>

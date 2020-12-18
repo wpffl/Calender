@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <script>
 function box_check(bck){
-    var obj = document.getElementsByName("locker");
+    var obj = document.getElementsByName("public","private");
     for(var i=0; i<obj.length; i++){
         if(obj[i] != bck){
             obj[i].checked = false;
@@ -30,7 +30,7 @@ function box_check(bck){
 </tr>
 
 <tr>
-	<th id="text">공/사</th>
+	<th id="text">분류</th>
 	<td>
 		<select name=type>
 			<option value="officially">직장</option>
@@ -41,7 +41,7 @@ function box_check(bck){
 
 <tr>
 	<th id="text">닉네임</th>
-	<td><input type="text" name="nickname"></td>
+	<td>${nickname}</td>
 </tr>
 
 <tr>
@@ -92,13 +92,13 @@ function box_check(bck){
 <tr>
 	<th id="text">공개여부</th>
 	<td>
-		<input type="checkbox" name="locker" value="1" onclick="box_check(this);" checked>공개
-		<input type="checkbox" name="locker" value="2" onclick="box_check(this);">비공개
+		<input type="checkbox" name="public" value="1" onclick="box_check(this);" checked>공개
+		<input type="checkbox" name="private" value="2" onclick="box_check(this);">비공개
 	</td>
 </tr>
 
 <tr>
-	<th id="text">설명</th>
+	<th id="text">내용</th>
 	<td><textarea name="content" rows="10" cols="35">세부일정을 입력해주세요!</textarea></td>
 </tr>
 
