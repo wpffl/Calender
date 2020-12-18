@@ -9,6 +9,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+function box_check(bck){
+    var obj = document.getElementsByName("public","private");
+    for(var i=0; i<obj.length; i++){
+        if(obj[i] != bck){
+            obj[i].checked = false;
+        }
+    }
+}
+</script>
 </head>
 <body>
 <div align="center">
@@ -18,7 +28,17 @@
 
 <tr>
 	<th scope="row" id="text1">제목</th>
-	<td>${m.title}</td>
+	<td><input type="text" name="title" value="${title}"></td>
+</tr>
+
+<tr>
+	<th id="text">분류</th>
+	<td>
+		<select name=type>
+			<option value="officially">직장</option>
+			<option value="personally">개인</option>
+		</select>
+	</td>
 </tr>
 
 <tr>
@@ -26,7 +46,7 @@
 	<td>${m.nickname}</td>
 </tr>
 
-<tr>
+<tr align="center">
 	<th scope="row" id="text1">일시</th>
 	<td>
 		<select id="year" name="year">
@@ -53,7 +73,7 @@
 		    <c:if test="${day>9}"><option>${day}</option></c:if>
 		 </c:forEach>
         	</select>일
-
+<br>
 		<select>
 			<c:forEach begin="1" end="23" var="hour">
 			    <c:if test="${hour<10}"><option>0${hour}</option></c:if>
@@ -73,12 +93,13 @@
 
 <tr>
 	<th scope="row" id="text1">공개여부</th>
-	<td>${locker}</td>
+	<td><input type="checkbox" name="public" value="1" onclick="box_check(this);" checked>공개
+	<input type="checkbox" name="private" value="2" onclick="box_check(this);">비공개</td>
 </tr>
 
 <tr>
-	<th scope="row" id="text1">설명</th>
-	<td>${content}</td>
+	<th scope="row" id="text1">내용</th>
+	<td><textarea name="content" rows="10" cols="35" value="${content}"></textarea></td>
 </tr>
 
 </table>
