@@ -13,6 +13,7 @@
 <body>
 <div align="center">
 <form action="content.jsp">
+<<input type="hidden" name="nickname" value="${m.nickname}">
 <h1>일정 수정</h1>
 <table class="type05">
 
@@ -21,10 +22,6 @@
 	<td><input type="text" name="title" value="${m.title}"></td>
 </tr>
 
-<tr>
-	<th id=text>닉네임</th>
-	<td><input type="text" name="nickname" value="${m.nickname}"></td>
-</tr>
 
 <tr>
 	<th id=text1>일시</th>
