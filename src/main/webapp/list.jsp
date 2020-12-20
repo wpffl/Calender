@@ -22,7 +22,7 @@
 				<c:forEach items="${list}" var="c">
 				<tr>
 					<td>${c.type}</td>
-					<td>${c.title}</td>
+					<td><a href="modify.do?nickname=${c.nickname}">${c.title}</a></td>
 					<td>${c.year}년${c.month}월${c.day}일</td>	
 					<td>${c.hour}시${c.minute}분</td>
 					<td>${c.regdate}</td>
