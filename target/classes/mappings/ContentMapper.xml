@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ContentMapper">
+	<!-- 일정등록 -->
+	<insert id="insertContent">
+		INSERT INTO SCH (ID, NICKNAME, TYPE, TITLE, CONTENT, STARTYEAR, STARTMONTH, STARTDAY, STARTHOUR, STARTMINUTE, ENDYEAR, ENDMONTH, ENDDAY, ENDHOUR, ENDMINUTE, LOCKER)
+			VALUES (#{id}, #{nickname}, #{type}, #{title}, #{content}, #{startYear}, #{startMonth}, #{startDay} ,#{startHour}, #{startMinute}, #{endYear}, #{endMonth}, #{endDay}, #{endHour}, #{endMinute}, #{locker});
+	</insert>
+
+</mapper>

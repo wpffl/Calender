@@ -9,7 +9,7 @@
   </typeAliases>
   
  <mappers>
-  <mapper resource="mappings/CalenderMapper.xml" />
+  <mapper resource="mappings/ContentMapper.xml" />
   <mapper resource="mappings/UserMapper.xml" />
  </mappers>   
 </configuration>

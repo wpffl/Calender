@@ -46,23 +46,33 @@ for(var y=start_year; y<=today_year; y++){
 </head>
 <body>
 <div align="center">
-<form action="calendar.do">
+<form action="insertContent.do" method="post">
 <h1>일정 등록</h1>
 <table class="type05">
 
 <tr>
 <th id="text">제목</th>
 <td>
+<<<<<<< Updated upstream
    <select name="type">
       <option value="officially">직장</option>
       <option value="personally" selected="selected">개인</option>
    </select>
    <input type="text" name="title">
    </td>
+=======
+	<select name="type">
+		<option value="of">직장</option>
+		<option value="in" selected="selected">개인</option>
+	</select>
+	<input type="text" name="title">
+	</td>
+>>>>>>> Stashed changes
 </tr>
    
    
 <tr>
+<<<<<<< Updated upstream
    <th id="text">닉네임</th>
    <td>${nickname}</td>
 </tr>
@@ -88,12 +98,44 @@ for(var y=start_year; y<=today_year; y++){
                </select>월   
                   
            <select name="startday" >
+=======
+	<th id="text">아이디</th>
+	<td><input type="text" name="id"></td>
+</tr>
+<tr>
+	<th id="text">닉네임</th>
+	<td><input type="text" name="nickname"></td>
+</tr>
+
+<tr>
+	<th id="text">일시</th>
+	<td>
+		<select id="year" name="starYear">
+           	<c:forEach var="i" begin="2020" end="2030" step="1" >
+               	<option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+               </c:forEach>
+        	</select>년
+			
+		<select id="select_month" onchange="javascript:lastday();" name="startMonth">
+							<c:forEach var="i" begin="1" end="12" step="1">
+							<c:if test="${i < 10}"> 
+							<option selected="startmonth">0${i}</option>
+							</c:if>
+							<c:if test="${i >=10 }">
+							<option selected="startmonth">${i}</option>
+							</c:if>
+							</c:forEach>
+					</select>월   
+        	       
+        	<select name="startDay" >
+>>>>>>> Stashed changes
          <c:forEach begin="1" end="31" var="day">
             <c:if test="${day<10}"><option>0${day}</option></c:if>
           <c:if test="${day>9}"><option>${day}</option></c:if>
        </c:forEach>
            </select>일
 
+<<<<<<< Updated upstream
       <select name="starthour">
          <c:forEach begin="1" end="23" var="hour">
              <c:if test="${hour<10}"><option>0${hour}</option></c:if>
@@ -108,10 +150,27 @@ for(var y=start_year; y<=today_year; y++){
          <c:if test="${minute>9}"><option>${minute}</option></c:if>
          </c:forEach>
       </select>분 ~ 
+=======
+		<select name="startHour">
+			<c:forEach begin="1" end="23" var="hour">
+			    <c:if test="${hour<10}"><option>0${hour}</option></c:if>
+				<c:if test="${hour>9}"><option>${hour}</option></c:if>
+				<c:if test="${hour==23}"><option>00</option></c:if>
+			</c:forEach>
+		</select>시
+		
+		<select name="startMinute">
+			<c:forEach begin="0" end="59" var="minute">
+	        <c:if test="${minute<10}"><option>0${minute}</option></c:if>
+			<c:if test="${minute>9}"><option>${minute}</option></c:if>
+			</c:forEach>
+		</select>분 ~ 
+>>>>>>> Stashed changes
 
    <br>
    
 
+<<<<<<< Updated upstream
       <select id="year" name="endyear">
               <c:forEach var="i" begin="2020" end="2030" step="1" >
                   <option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
@@ -130,12 +189,33 @@ for(var y=start_year; y<=today_year; y++){
                </select>월   
                   
            <select name="endday" >
+=======
+		<select id="year" name="endYear">
+           	<c:forEach var="i" begin="2020" end="2030" step="1" >
+               	<option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+               </c:forEach>
+        	</select>년
+			
+		<select id="select_month" onchange="javascript:lastday();" name="endMonth">
+							<c:forEach var="i" begin="1" end="12" step="1">
+							<c:if test="${i < 10}"> 
+							<option selected="endmonth">0${i}</option>
+							</c:if>
+							<c:if test="${i >=10 }">
+							<option selected="endmonth">${i}</option>
+							</c:if>
+							</c:forEach>
+					</select>월   
+        	       
+        	<select name="endDay" >
+>>>>>>> Stashed changes
          <c:forEach begin="1" end="31" var="day">
             <c:if test="${day<10}"><option>0${day}</option></c:if>
           <c:if test="${day>9}"><option>${day}</option></c:if>
        </c:forEach>
            </select>일
 
+<<<<<<< Updated upstream
       <select name="endhour">
          <c:forEach begin="1" end="23" var="hour">
              <c:if test="${hour<10}"><option>0${hour}</option></c:if>
@@ -150,15 +230,39 @@ for(var y=start_year; y<=today_year; y++){
          <c:if test="${minute>9}"><option>${minute}</option></c:if>
          </c:forEach>
       </select>분 
+=======
+		<select name="endHour">
+			<c:forEach begin="1" end="23" var="hour">
+			    <c:if test="${hour<10}"><option>0${hour}</option></c:if>
+				<c:if test="${hour>9}"><option>${hour}</option></c:if>
+				<c:if test="${hour==23}"><option>00</option></c:if>
+			</c:forEach>
+		</select>시
+		
+		<select name="endMinute">
+			<c:forEach begin="0" end="59" var="minute">
+	        <c:if test="${minute<10}"><option>0${minute}</option></c:if>
+			<c:if test="${minute>9}"><option>${minute}</option></c:if>
+			</c:forEach>
+		</select>분 
+>>>>>>> Stashed changes
 </td>
 </tr>
 
 <tr>
+<<<<<<< Updated upstream
    <th id="text">공개여부</th>
    <td>
       <input type="checkbox" name="public" value="1" onclick="box_check(this);" checked>공개
       <input type="checkbox" name="private" value="2" onclick="box_check(this);">비공개
    </td>
+=======
+	<th id="text">공개여부</th>
+	<td>
+		<input type="checkbox" name="locker" value="1" onclick="box_check(this);" checked>공개
+		<input type="checkbox" name="locker" value="2" onclick="box_check(this);">비공개
+	</td>
+>>>>>>> Stashed changes
 </tr>
 
 <tr>
