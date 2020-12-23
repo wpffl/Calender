@@ -13,21 +13,18 @@
 <body>
 <div align="center">
 <form action="content.jsp">
+<<input type="hidden" name="nickname" value="${m.nickname}">
 <h1>일정 수정</h1>
-<table border=1>
+<table class="type05">
 
 <tr>
-	<td>제목</td>
+	<th id=text>제목</th>
 	<td><input type="text" name="title" value="${m.title}"></td>
 </tr>
 
-<tr>
-	<td>닉네임</td>
-	<td><input type="text" name="nickname" value="${m.nickname}"></td>
-</tr>
 
 <tr>
-	<td>일시</td>
+	<th id=text1>일시</th>
 	<td>
 		<select id="year" name="year">
            	<c:forEach var="i" begin="2000" end="2030" step="1" >
@@ -72,7 +69,7 @@
 </tr>
 
 <tr>
-	<td>공개여부</td>
+	<th id=text1>공개여부</th>
 	<td>
 		<input type="checkbox" name="locker" value="1" checked>공개
 		<input type="checkbox" name="locker" value="2">비공개
@@ -80,7 +77,7 @@
 </tr>
 
 <tr>
-	<td>설명</td>
+	<th id=text1>설명</th>
 	<td><textarea name="content" rows="10" cols="30"></textarea></td>
 	<!-- textarea 값 넘겨받는 방법 찾는중 placeholder="<?=$content?>" -->
 </tr>

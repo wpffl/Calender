@@ -38,8 +38,8 @@ public class CalenderVO {
 	}
 	@Override
 	public String toString() {
-		return "CalenderVO [year=" + year + ", month=" + month + ", dayOfWeek=" + dayOfWeek + ", lastDay=" + lastDay
-				+ ", yyyymm=" + yyyymm + "]";
+		return "CalenderVO [year=" + year + ", month=" + month + ", dayOfWeek=" + dayOfWeek
+				+ ", lastDay=" + lastDay + ", yyyymm=" + yyyymm + "]";
 	}
 	
 	
