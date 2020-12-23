@@ -72,40 +72,40 @@ for(var y=start_year; y<=today_year; y++){
    <td>
       <select id="year" name="startyear">
               <c:forEach var="i" begin="2020" end="2030" step="1" >
-                  <option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+                  <option value="startyear" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
                </c:forEach>
            </select>년
          
       <select id="select_month" onchange="javascript:lastday();" name="startmonth">
                      <c:forEach var="i" begin="1" end="12" step="1">
                      <c:if test="${i < 10}"> 
-                     <option selected="startmonth">0${i}</option>
+                     <option value="startmonth" selected="selected">0${i}</option>
                      </c:if>
                      <c:if test="${i >=10 }">
-                     <option selected="startmonth">${i}</option>
+                     <option value="startmonth">${i}</option>
                      </c:if>
                      </c:forEach>
                </select>월   
                   
            <select name="startday" >
          <c:forEach begin="1" end="31" var="day">
-            <c:if test="${day<10}"><option>0${day}</option></c:if>
-          <c:if test="${day>9}"><option>${day}</option></c:if>
+            <c:if test="${day<10}"><option value="startday">0${day}</option></c:if>
+          <c:if test="${day>9}"><option value="startday">${day}</option></c:if>
        </c:forEach>
            </select>일
 
       <select name="starthour">
          <c:forEach begin="1" end="23" var="hour">
-             <c:if test="${hour<10}"><option>0${hour}</option></c:if>
-            <c:if test="${hour>9}"><option>${hour}</option></c:if>
-            <c:if test="${hour==23}"><option>00</option></c:if>
+             <c:if test="${hour<10}"><option value="starthour">0${hour}</option></c:if>
+            <c:if test="${hour>9}"><option value="starthour">${hour}</option></c:if>
+            <c:if test="${hour==23}"><option value="starthour">00</option></c:if>
          </c:forEach>
       </select>시
       
       <select name="startminute">
          <c:forEach begin="0" end="59" var="minute">
-           <c:if test="${minute<10}"><option>0${minute}</option></c:if>
-         <c:if test="${minute>9}"><option>${minute}</option></c:if>
+           <c:if test="${minute<10}"><option value="startminute">0${minute}</option></c:if>
+         <c:if test="${minute>9}"><option value="startminute">${minute}</option></c:if>
          </c:forEach>
       </select>분 ~ 
 
@@ -114,40 +114,40 @@ for(var y=start_year; y<=today_year; y++){
 
       <select id="year" name="endyear">
               <c:forEach var="i" begin="2020" end="2030" step="1" >
-                  <option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+                  <option value="endyear" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
                </c:forEach>
            </select>년
          
       <select id="select_month" onchange="javascript:lastday();" name="endmonth">
                      <c:forEach var="i" begin="1" end="12" step="1">
                      <c:if test="${i < 10}"> 
-                     <option selected="endmonth">0${i}</option>
+                     <option value="endmonth" selected="selected">0${i}</option>
                      </c:if>
                      <c:if test="${i >=10 }">
-                     <option selected="endmonth">${i}</option>
+                     <option value="endmonth">${i}</option>
                      </c:if>
                      </c:forEach>
                </select>월   
                   
            <select name="endday" >
          <c:forEach begin="1" end="31" var="day">
-            <c:if test="${day<10}"><option>0${day}</option></c:if>
-          <c:if test="${day>9}"><option>${day}</option></c:if>
+            <c:if test="${day<10}"><option value="endday">0${day}</option></c:if>
+          <c:if test="${day>9}"><option value="endday">${day}</option></c:if>
        </c:forEach>
            </select>일
 
       <select name="endhour">
          <c:forEach begin="1" end="23" var="hour">
-             <c:if test="${hour<10}"><option>0${hour}</option></c:if>
-            <c:if test="${hour>9}"><option>${hour}</option></c:if>
-            <c:if test="${hour==23}"><option>00</option></c:if>
+             <c:if test="${hour<10}"><option value="endhour">0${hour}</option></c:if>
+            <c:if test="${hour>9}"><option value="endhour">${hour}</option></c:if>
+            <c:if test="${hour==23}"><option value="endhour">00</option></c:if>
          </c:forEach>
       </select>시
       
       <select name="endminute">
          <c:forEach begin="0" end="59" var="minute">
-           <c:if test="${minute<10}"><option>0${minute}</option></c:if>
-         <c:if test="${minute>9}"><option>${minute}</option></c:if>
+           <c:if test="${minute<10}"><option value="endminute">0${minute}</option></c:if>
+         <c:if test="${minute>9}"><option value="endminute">${minute}</option></c:if>
          </c:forEach>
       </select>분 
 </td>
