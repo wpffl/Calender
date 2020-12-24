@@ -73,78 +73,78 @@ function box_check(bck){
 	<td>
 		<select id="select_year" onchange="javascript:lastday();" name="startyear">
            	<c:forEach var="i" begin="2020" end="2030" step="1" >
-               	<option selected="selected" value="startyear" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+               	<option selected="selected" value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
                </c:forEach>
         	</select>년
 			
 	<select id="select_month" onchange="javascript:lastday();" name="startmonth">
 							<c:forEach var="i" begin="1" end="12" step="1">
 							<c:if test="${i < 10}"> 
-							<option value="startmonth" selected="selected">0${i}</option>
+							<option selected="startmonth">0${i}</option>
 							</c:if>
 							<c:if test="${i >=10 }">
-							<option value="startmonth" >${i}</option>
+							<option selected="startmonth">${i}</option>
 							</c:if>
 							</c:forEach>
 					</select>월 
         	       
         	<select name="startday" >
          <c:forEach begin="1" end="31" var="day">
-         	<c:if test="${startday<10}"><option value="startday">0${startday}</option></c:if>
-		    <c:if test="${startday>9}"><option value="startday">${startday}</option></c:if>
+         	<c:if test="${startday<10}"><option>0${startday}</option></c:if>
+		    <c:if test="${startday>9}"><option>${startday}</option></c:if>
 		 </c:forEach>
         	</select>일
 		<select>
 			<c:forEach begin="1" end="23" var="starthour">
-			    <c:if test="${starthour<10}"><option value="starthour">0${starthour}</option></c:if>
-				<c:if test="${starthour>9}"><option value="starthour">${starthour}</option></c:if>
-				<c:if test="${starthour==23}"><option value="starthour">00</option></c:if>
+			    <c:if test="${starthour<10}"><option>0${starthour}</option></c:if>
+				<c:if test="${starthour>9}"><option>${starthour}</option></c:if>
+				<c:if test="${starthour==23}"><option>00</option></c:if>
 			</c:forEach>
 		</select>시
 		
 		<select>
 			<c:forEach begin="0" end="59" var="startminute">
-	        <c:if test="${startminute<10}"><option value="startminute">0${startminute}</option></c:if>
-			<c:if test="${startminute>9}"><option value="startminute">${startminute}</option></c:if>
+	        <c:if test="${startminute<10}"><option>0${startminute}</option></c:if>
+			<c:if test="${startminute>9}"><option>${startminute}</option></c:if>
 			</c:forEach>
 		</select>분 ~ 
 
 	<br>
 		<select id="select_year" onchange="javascript:lastday();" name="endyear">
            	<c:forEach var="i" begin="2000" end="2030" step="1" >
-               	<option value="endyear" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+               	<option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
                </c:forEach>
         	</select>년
 			
 		<select id="select_month" onchange="javascript:lastday();" name="endmonth">
 							<c:forEach var="i" begin="1" end="12" step="1">
 							<c:if test="${i < 10}"> 
-							<option value="endmonth" selected="selected">0${i}</option>
+							<option selected="endmonth">0${i}</option>
 							</c:if>
 							<c:if test="${i >=10 }">
-							<option  value="endmonth">${i}</option>
+							<option selected="endmonth">${i}</option>
 							</c:if>
 							</c:forEach>
 					</select>월    
         	       
         	<select name="endday" >
          <c:forEach begin="1" end="31" var="day">
-         	<c:if test="${endday<10}"><option value="endday">0${endday}</option></c:if>
-		    <c:if test="${endday>9}"><option value="endday">${endday}</option></c:if>
+         	<c:if test="${endday<10}"><option>0${endday}</option></c:if>
+		    <c:if test="${endday>9}"><option>${endday}</option></c:if>
 		 </c:forEach>
         	</select>일
 		<select>
 			<c:forEach begin="1" end="23" var="endhour">
-			    <c:if test="${endhour<10}"><option value="endhour">0${endhour}</option></c:if>
-				<c:if test="${endhour>9}"><option value="endhour">${endhour}</option></c:if>
-				<c:if test="${endhour==23}"><option value="endhour">00</option></c:if>
+			    <c:if test="${endhour<10}"><option>0${endhour}</option></c:if>
+				<c:if test="${endhour>9}"><option>${endhour}</option></c:if>
+				<c:if test="${endhour==23}"><option>00</option></c:if>
 			</c:forEach>
 		</select>시
 		
 		<select>
 			<c:forEach begin="0" end="59" var="endminute">
-	        <c:if test="${endminute<10}"><option value="endminute">0${endminute}</option></c:if>
-			<c:if test="${endminute>9}"><option value="endminute">${endminute}</option></c:if>
+	        <c:if test="${endminute<10}"><option>0${endminute}</option></c:if>
+			<c:if test="${endminute>9}"><option>${endminute}</option></c:if>
 			</c:forEach>
 		</select>분
 	</td>
