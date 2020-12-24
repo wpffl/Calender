@@ -144,25 +144,25 @@ action="join.do" onsubmit="return checkValue()">
 		
 			<select id="select_year" onchange="javascript:lastday();" name="birthy">
 			   <c:forEach var="i" begin="1900" end="2020" step="1" >
-			       <option value="${i}" <c:if test="${i == (now.year + 1900)}">${i}</c:if> >${i}</option>
+			       <option value="birthy" <c:if test="${i == (now.year + 1900)}">${i}</c:if> >${i}</option>
 			   </c:forEach>
 			</select><font id=text3>년</font>
 	
 	         <select id="select_month" onchange="javascript:lastday();" name="birthm">
 										<c:forEach var="i" begin="1" end="12" step="1">
 							<c:if test="${i < 10}"> 
-							<option selected="month">0${i}</option>
+							<option value="birthm" selected="selected">0${i}</option>
 							</c:if>
 							<c:if test="${i >=10 }">
-							<option selected="month">${i}</option>
+							<option value="birthm">${i}</option>
 							</c:if>
 							</c:forEach>
 	         </select><font id=text3>월</font>   
 	         
 	         <select id="select_day" name="birthd" >
 		         <c:forEach begin="1" end="31" var="day">
-		         	<c:if test="${day<10}"><option>0${day}</option></c:if>
-				    <c:if test="${day>9}"><option>${day}</option></c:if>
+		         	<c:if test="${day<10}"><option value="birthd">0${day}</option></c:if>
+				    <c:if test="${day>9}"><option value="birthd">${day}</option></c:if>
 				 </c:forEach>
 	         </select><font id=text3>일 </font>
 		</td>
@@ -191,7 +191,7 @@ action="join.do" onsubmit="return checkValue()">
 		<!--<input type=submit  value="등록">-->
 
 	  <input type="submit" id="j_btn_1" value="가입하기" /> 
-	<input type="button" id="j_btn_1" value="취소" onclick="location.href='calender.jsp'">
+	<input type="button" id="j_btn_1" value="취소" onclick="location.href='calender.do'">
 	<br><br>
 	</form>
 	
