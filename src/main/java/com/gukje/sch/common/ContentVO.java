@@ -3,29 +3,17 @@ package com.gukje.sch.common;
 import java.sql.Date;
 
 public class ContentVO {
-	private String id;
-    private String nickname; 
-    private String type;
-    private String title;
-    private String content;
-    private int startYear;
-    private int startMonth;
-    private int startDay;
-    private int startHour;
-    private int startMinute;
-    private int endYear;
-    private int endMonth;
-    private int endDay;
-    private int endHour;
-    private int endMinute;
-    private Date regDate;
-    private int locker;
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+	private String nickname;
+	private String type;
+	private String title;
+	private String content;
+	private int year;
+	private int month;
+	private int day;
+	private int hour;
+	private int minute;
+	private Date regdate;
+	private String locker;
 	public String getNickname() {
 		return nickname;
 	}
@@ -50,86 +38,47 @@ public class ContentVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public int getStartYear() {
-		return startYear;
+	public int getYear() {
+		return year;
 	}
-	public void setStartYear(int startYear) {
-		this.startYear = startYear;
+	public void setYear(int year) {
+		this.year = year;
 	}
-	public int getStartMonth() {
-		return startMonth;
+	public int getMonth() {
+		return month;
 	}
-	public void setStartMonth(int startMonth) {
-		this.startMonth = startMonth;
+	public void setMonth(int month) {
+		this.month = month;
 	}
-	public int getStartDay() {
-		return startDay;
+	public int getDay() {
+		return day;
 	}
-	public void setStartDay(int startDay) {
-		this.startDay = startDay;
+	public void setDay(int day) {
+		this.day = day;
 	}
-	public int getStartHour() {
-		return startHour;
+	public int getHour() {
+		return hour;
 	}
-	public void setStartHour(int startHour) {
-		this.startHour = startHour;
+	public void setHour(int hour) {
+		this.hour = hour;
 	}
-	public int getStartMinute() {
-		return startMinute;
+	public int getMinute() {
+		return minute;
 	}
-	public void setStartMinute(int startMinute) {
-		this.startMinute = startMinute;
+	public void setMinute(int minute) {
+		this.minute = minute;
 	}
-	public int getEndYear() {
-		return endYear;
+	public Date getRegdate() {
+		return regdate;
 	}
-	public void setEndYear(int endYear) {
-		this.endYear = endYear;
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
 	}
-	public int getEndMonth() {
-		return endMonth;
-	}
-	public void setEndMonth(int endMonth) {
-		this.endMonth = endMonth;
-	}
-	public int getEndDay() {
-		return endDay;
-	}
-	public void setEndDay(int endDay) {
-		this.endDay = endDay;
-	}
-	public int getEndHour() {
-		return endHour;
-	}
-	public void setEndHour(int endHour) {
-		this.endHour = endHour;
-	}
-	public int getEndMinute() {
-		return endMinute;
-	}
-	public void setEndMinute(int endMinute) {
-		this.endMinute = endMinute;
-	}
-	public Date getRegDate() {
-		return regDate;
-	}
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
-	}
-	public int getLocker() {
+	public String getLocker() {
 		return locker;
 	}
-	public void setLocker(int locker) {
+	public void setLocker(String locker) {
 		this.locker = locker;
 	}
-	@Override
-	public String toString() {
-		return "ContentVO [id=" + id + ", nickname=" + nickname + ", type=" + type + ", title=" + title + ", content="
-				+ content + ", startYear=" + startYear + ", startMonth=" + startMonth + ", startDay=" + startDay
-				+ ", startHour=" + startHour + ", startMinute=" + startMinute + ", endYear=" + endYear + ", endMonth="
-				+ endMonth + ", endDay=" + endDay + ", endHour=" + endHour + ", endMinute=" + endMinute + ", regDate="
-				+ regDate + ", locker=" + locker + "]";
-	}
-    
-    
+	
 }
