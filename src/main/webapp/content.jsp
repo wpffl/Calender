@@ -90,8 +90,8 @@ function box_check(bck){
         	       
         	<select name="startday" >
          <c:forEach begin="1" end="31" var="day">
-         	<c:if test="${startday<10}"><option value="startday">0${startday}</option></c:if>
-		    <c:if test="${startday>9}"><option value="startday">${startday}</option></c:if>
+         	<c:if test="${day<10}"><option value="startday">0${day}</option></c:if>
+		    <c:if test="${day>9}"><option value="startday">${day}</option></c:if>
 		 </c:forEach>
         	</select>일
 		<select>
@@ -129,8 +129,8 @@ function box_check(bck){
         	       
         	<select name="endday" >
          <c:forEach begin="1" end="31" var="day">
-         	<c:if test="${endday<10}"><option value="endday">0${endday}</option></c:if>
-		    <c:if test="${endday>9}"><option value="endday">${endday}</option></c:if>
+         	<c:if test="${day<10}"><option value="endday">0${day}</option></c:if>
+		    <c:if test="${day>9}"><option value="endday">${day}</option></c:if>
 		 </c:forEach>
         	</select>일
 		<select>
