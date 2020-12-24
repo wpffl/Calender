@@ -46,7 +46,7 @@ for(var y=start_year; y<=today_year; y++){
 </head>
 <body>
 <div align="center">
-<form action="calendar.do">
+<form action="insertContent.do" method="POST">
 <h1>일정 등록</h1>
 <table class="type05">
 
@@ -54,35 +54,32 @@ for(var y=start_year; y<=today_year; y++){
 <th id="text">제목</th>
 <td>
    <select name="type">
-      <option value="officially">직장</option>
-      <option value="personally" selected="selected">개인</option>
+      <option value="of">직장</option>
+      <option value="pe" selected="selected">개인</option>
    </select>
    <input type="text" name="title">
    </td>
 </tr>
-   
-   
-<tr>
-   <th id="text">닉네임</th>
-   <td>${nickname}</td>
-</tr>
 
+<tr>
+ <th id="text">닉네임</th><td> <input type="text" name="nickname"></td>
+ </tr>
 <tr>
    <th id="text">일시</th>
    <td>
       <select id="year" name="startyear">
               <c:forEach var="i" begin="2020" end="2030" step="1" >
-                  <option value="${i}" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
+                  <option <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
                </c:forEach>
            </select>년
          
       <select id="select_month" onchange="javascript:lastday();" name="startmonth">
                      <c:forEach var="i" begin="1" end="12" step="1">
                      <c:if test="${i < 10}"> 
-                     <option selected="startmonth">0${i}</option>
+                     <option>0${i}</option>
                      </c:if>
                      <c:if test="${i >=10 }">
-                     <option selected="startmonth">${i}</option>
+                     <option>${i}</option>
                      </c:if>
                      </c:forEach>
                </select>월   
@@ -121,10 +118,10 @@ for(var y=start_year; y<=today_year; y++){
       <select id="select_month" onchange="javascript:lastday();" name="endmonth">
                      <c:forEach var="i" begin="1" end="12" step="1">
                      <c:if test="${i < 10}"> 
-                     <option selected="endmonth">0${i}</option>
+                     <option>0${i}</option>
                      </c:if>
                      <c:if test="${i >=10 }">
-                     <option selected="endmonth">${i}</option>
+                     <option>${i}</option>
                      </c:if>
                      </c:forEach>
                </select>월   
