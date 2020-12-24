@@ -7,34 +7,6 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/myinfo.css">
 <title>Insert title here</title>
-<script>
-var start_year = "2020";
-// 시작할 년도 
-var today = new Date(); 
-var today_year= today.getFullYear(); 
-var index=0; 
-for(var y=start_year; y<=today_year; y++){ 
-	//start_year ~ 현재 년도 
-	document.getElementById('select_year').options[index] = new Option(y, y); index++; } index=0; 
-	for(var m=1; m<=12; m++){ document.getElementById('select_month').options[index] = new Option(m, m); index++; } lastday(); 
-	function lastday(){ 
-		//년과 월에 따라 마지막 일 구하기 
-		var Year=document.getElementById('select_year').value; 
-		var Month=document.getElementById('select_month').value; 
-		var day=new Date(new Date(Year,Month,1)-86400000).getDate(); 
-		var dayindex_len=document.getElementById('select_day').length;
-		if(day>dayindex_len){ 
-			for(var i=(dayindex_len+1); i<=day; i++){ 
-				document.getElementById('select_day').options[i-1] = new Option(i, i);
-				} 
-		} else if(day<dayindex_len){ 
-			for(var i=dayindex_len; i>=day; i--){ 
-				document.getElementById('select_day').options[i]=null; 
-				} 
-			} 
-		}
-</script>
-
 </head>
 <body>
 <div align="center" id="outline">
@@ -69,29 +41,32 @@ for(var y=start_year; y<=today_year; y++){
 		</tr>
 		<tr>
 		<td>
-		<select id="year" name="myyear">
-              <c:forEach var="i" begin="2020" end="2030" step="1" >
-                  <option value="myyear" <c:if test="${i == (now.year + 1900)}">selected</c:if> >${i}</option>
-               </c:forEach>
-           </select>년
-         
-      <select id="select_month" onchange="javascript:lastday();" name="mymonth">
-                     <c:forEach var="i" begin="1" end="12" step="1">
-                     <c:if test="${i < 10}"> 
-                     <option value="mymonth" selected="selected">0${i}</option>
-                     </c:if>
-                     <c:if test="${i >=10 }">
-                     <option value="mymonth">${i}</option>
-                     </c:if>
-                     </c:forEach>
-               </select>월   
-                  
-           <select name="myday" >
-         <c:forEach begin="1" end="31" var="day">
-            <c:if test="${day<10}"><option value="myday">0${day}</option></c:if>
-          <c:if test="${day>9}"><option value="myday">${day}</option></c:if>
-       </c:forEach>
-           </select>일
+		
+			<select id="year" name="year">
+			   <c:forEach var="i" begin="1900" end="2020" step="1" >
+			       <option selected="${user.year}" value="${i}" <c:if test="${i == (now.year + 1900)}">${i}</c:if> >${i}</option>
+						   
+			   </c:forEach>
+			</select>년
+	
+	        <select name="month">
+	         <% 
+	         	for(int i=1; i<13; i++){
+	         	if(i<10){%>
+	            <option selected="${user.month}">0<%=i%></option><%}
+	         	else{%>
+	         	<option selected="${user.month}"><%=i%></option>
+	         	<%
+	         	}}
+	         	%>
+	         </select>월   
+	         
+	         <select name="day" >
+		         <c:forEach begin="1" end="31" var="day">
+		         	<c:if test="${day<10}"><option selected="${user.day}">0${day}</option></c:if>
+				    <c:if test="${day>9}"><option selected="${user.day}">${day}</option></c:if>
+				 </c:forEach>
+	         </select>일 
 		</td>
 		</tr>
 		 
