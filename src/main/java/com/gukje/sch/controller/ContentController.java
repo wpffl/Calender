@@ -18,6 +18,6 @@ public class ContentController {
     	s.insertContent(vo);	    	
     	System.out.println(vo.toString());
     	System.out.println("컨트롤러");
-    	return "calender.do";		
+	return "calender.jsp";		
     }
 }
