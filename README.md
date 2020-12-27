@@ -1,7 +1,7 @@
 # -Calender
 
 [ 데이터 베이스 테이블 ]
-
+~~~sql
 create table sch(
 idx number,
 nickname nvarchar2(10) not null, 
@@ -45,3 +45,4 @@ email nvarchar2(50) not null
 );
 
 select * from usertbl;
+~~~
