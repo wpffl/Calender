@@ -13,7 +13,7 @@
 <body>
 <div align="center">
 <form action="content.jsp">
-<<input type="hidden" name="nickname" value="${m.nickname}">
+<input type="hidden" name="nickname" value="${m.nickname}">
 <h1>일정 수정</h1>
 <table class="type05">
 

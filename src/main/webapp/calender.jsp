@@ -10,6 +10,10 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/calendar.css">
 
+<style type="text/css"> 
+	a { text-decoration:none } 
+	a:visited { color: #007db3; text-decoration: none; }
+</style>
 
 <title>달력 게시판</title>
 
@@ -19,27 +23,26 @@
 <button type="submit" id="insert" onclick="location.href='insert.jsp'">일정등록</button>
 <button type="submit" id="myinfo" onclick="location.href='myinfo.jsp'">회원수정</button>
 <button type="submit" id="c_logout" onclick="location.href='logout.do'">로그아웃</button>
-<h1>일정관리 게시판</h1>
+<h1 id="text">Everyone's Calendar</h1>
 
 	<table id="calendar">
-		<caption>
-			<a href="./calender.do?year=${c.year-1}&month=${c.month-1}">이전 년도</a>
-			&nbsp;
-			<a href="./calender.do?year=${c.year}&month=${c.month-1}">이전 월</a>
-				<span class="y">${c.year}</span>년도
-				<span class="m">${c.month}</span>월
-			<a href="./calender.do?year=${c.year}&month=${c.month+1}">다음 월</a>
-			&nbsp;
-			<a href="./calender.do?year=${c.year+1}&month=${c.month}">다음 년도</a>
+		<caption id="text1">
+			<a href="./calender.do?year=${c.year-1}&month=${c.month-1}"><span id="t3">◁</span></a>
+				<span class="y">${c.year}</span><span id="t1">년</span>
+			<a href="./calender.do?year=${c.year+1}&month=${c.month}"><span id="t4">▷</span></a>
+			<br>
+			<a href="./calender.do?year=${c.year}&month=${c.month-1}">◁</a>
+				<span class="m">${c.month}</span><span id="t2">월</span>
+			<a href="./calender.do?year=${c.year}&month=${c.month+1}">▷</a>
 		</caption>
 		<tr>
-			<th>일</th>
+			<th id="sun">일</th>
 			<th>월</th>
 			<th>화</th>
 			<th>수</th>
 			<th>목</th>
 			<th>금</th>
-			<th>토</th>
+			<th id="sat">토</th>
 		</tr>
 		<tr>
 			<c:forEach begin="0" end="${c.dayOfWeek-2}" step="1">
@@ -59,7 +62,7 @@
 			
 		</tr>
 	</table>
-</div>
+  </div>	
 
 </body>
 </html> 
