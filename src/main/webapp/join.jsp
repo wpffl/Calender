@@ -191,7 +191,7 @@ action="join.do" onsubmit="return checkValue()">
 		<!--<input type=submit  value="등록">-->
 
 	  <input type="submit" id="j_btn_1" value="가입하기" /> 
-	<input type="button" id="j_btn_1" value="취소" onclick="location.href='calender.jsp'">
+	<input type="button" id="j_btn_1" value="취소" onclick="location.href='login.jsp'">
 	<br><br>
 	</form>
 	

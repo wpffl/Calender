@@ -1,19 +1,49 @@
 @charset "UTF-8";
 
+
 #calendar{
 	border : 1px solid gray;
 	border-collapse: collapse;
+	font-family:arial;
+}
+
+#text {
+	color:#0099db;
+}
+
+#text1 {
+	font-size:25px;
+	padding-bottom:10px;
+	color:#00a0f0;
+}
+
+#t1 {
+	font-size:22px;
+	font-family:arial;
+}
+
+#t2 {
+	font-size:22px;
+	font-family:arial;
+}
+
+#sat {
+	color:blue;
+}
+
+#sun {
+	color:red;
 }
 
 #calendar th{
 	width : 80px;
-	border : 1px solid gray;
+	border : 1px solid skyblue;
 }
 
 #calendar td{
 	width: 80px;
 	height: 80px;
-	border : 1px solid gray;
+	border : 1px solid skyblue;
 	text-align : left;
 	vertical-align : top;
 	position : relative; 
