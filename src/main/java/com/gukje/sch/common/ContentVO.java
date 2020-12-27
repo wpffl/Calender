@@ -3,6 +3,7 @@ package com.gukje.sch.common;
 import java.sql.Date;
 
 public class ContentVO {
+	private int idx;
 	private String id;
     private String nickname; 
     private String type;
@@ -20,6 +21,14 @@ public class ContentVO {
     private int endminute;
     private Date regdate;
     private int locker;
+    
+    
+	public int getIdx() {
+		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
 	public String getId() {
 		return id;
 	}
